@@ -1,0 +1,9 @@
+Package: com.ginsu.gsprefs
+Name: GSPrefs
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: A SwiftUI Prefs Framework
+Maintainer: Ginsu
+Author: Ginsu
+Section: Tweaks
+Depends: dev.theos.orion14, firmware (>= 14.0)
