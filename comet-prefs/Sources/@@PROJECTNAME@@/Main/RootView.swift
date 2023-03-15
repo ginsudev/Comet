@@ -1,5 +1,5 @@
 import SwiftUI
-import GSPrefs
+import Comet
 
 struct RootView: View {
     @StateObject private var preferenceStorage = PreferenceStorage()

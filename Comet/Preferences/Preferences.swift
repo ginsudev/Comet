@@ -1,6 +1,6 @@
 //
 //  Preferences.swift
-//  GSPrefs
+//  Comet
 //
 //  Created by Noah Little on 11/3/2023.
 //
@@ -55,7 +55,7 @@ private extension URL {
         var propertyListFormat: PropertyListSerialization.PropertyListFormat = .xml
         do {
             let data = try Data(contentsOf: self)
-            guard var plistDict = try PropertyListSerialization.propertyList(
+            guard let plistDict = try PropertyListSerialization.propertyList(
                 from: data,
                 options: .mutableContainersAndLeaves,
                 format: &propertyListFormat

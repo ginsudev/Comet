@@ -1,6 +1,6 @@
 //
 //  Published+Preferences.swift
-//  GSPrefs
+//  Comet
 //
 //  Created by Noah Little on 12/3/2023.
 //

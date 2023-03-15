@@ -1,11 +1,11 @@
 import Foundation
-import GSPrefs
+import Comet
 
 // MARK: - Internal
 
 final class PreferenceStorage: ObservableObject {
     private static let registry: String = "/var/mobile/Library/Preferences/@@PACKAGENAME@@.plist"
-    /// Welcome to GSPrefs
+    /// Welcome to Comet
     /// By @ginsudev
     ///
     /// Mark your preferences with `@Published(key: "someKey", registry: PreferenceStorage.registry)`.

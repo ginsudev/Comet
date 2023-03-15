@@ -13,7 +13,7 @@
 
 /* Begin PBXFileReference section */
 		4F1DD2E929BD574300ADD96C /* Published+Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Preferences.swift"; sourceTree = "<group>"; };
-		4F9D071B29BC3C270037A73A /* GSPrefs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GSPrefs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9D071B29BC3C270037A73A /* Comet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D072529BC3C480037A73A /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,7 +40,7 @@
 		4F9D071129BC3C270037A73A = {
 			isa = PBXGroup;
 			children = (
-				4F9D071D29BC3C270037A73A /* GSPrefs */,
+				4F9D071D29BC3C270037A73A /* Comet */,
 				4F9D071C29BC3C270037A73A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,17 +48,17 @@
 		4F9D071C29BC3C270037A73A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F9D071B29BC3C270037A73A /* GSPrefs.framework */,
+				4F9D071B29BC3C270037A73A /* Comet.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F9D071D29BC3C270037A73A /* GSPrefs */ = {
+		4F9D071D29BC3C270037A73A /* Comet */ = {
 			isa = PBXGroup;
 			children = (
 				4F1DD2E829BD572E00ADD96C /* Preferences */,
 			);
-			path = GSPrefs;
+			path = Comet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +74,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4F9D071A29BC3C270037A73A /* GSPrefs */ = {
+		4F9D071A29BC3C270037A73A /* Comet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F9D072229BC3C270037A73A /* Build configuration list for PBXNativeTarget "GSPrefs" */;
+			buildConfigurationList = 4F9D072229BC3C270037A73A /* Build configuration list for PBXNativeTarget "Comet" */;
 			buildPhases = (
 				4F9D071629BC3C270037A73A /* Headers */,
 				4F9D071729BC3C270037A73A /* Sources */,
@@ -87,9 +87,9 @@
 			);
 			dependencies = (
 			);
-			name = GSPrefs;
+			name = Comet;
 			productName = GSPrefs;
-			productReference = 4F9D071B29BC3C270037A73A /* GSPrefs.framework */;
+			productReference = 4F9D071B29BC3C270037A73A /* Comet.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -107,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4F9D071529BC3C270037A73A /* Build configuration list for PBXProject "GSPrefs" */;
+			buildConfigurationList = 4F9D071529BC3C270037A73A /* Build configuration list for PBXProject "Comet" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -120,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F9D071A29BC3C270037A73A /* GSPrefs */,
+				4F9D071A29BC3C270037A73A /* Comet */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +304,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ginsu.GSPrefs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ginsu.Comet;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -342,7 +342,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ginsu.GSPrefs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ginsu.Comet;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -356,7 +356,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F9D071529BC3C270037A73A /* Build configuration list for PBXProject "GSPrefs" */ = {
+		4F9D071529BC3C270037A73A /* Build configuration list for PBXProject "Comet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F9D072029BC3C270037A73A /* Debug */,
@@ -365,7 +365,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F9D072229BC3C270037A73A /* Build configuration list for PBXNativeTarget "GSPrefs" */ = {
+		4F9D072229BC3C270037A73A /* Build configuration list for PBXNativeTarget "Comet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F9D072329BC3C270037A73A /* Debug */,
