@@ -1,5 +1,5 @@
 
-# GSPrefs
+# Comet
 
 A Framework for writing SwiftUI preference panes for iOS jailbreak tweaks.
 
@@ -12,12 +12,12 @@ https://orion.theos.dev/getting-started.html
 2. Clone this repository
 
 ```bash
-  git clone https://github.com/ginsudev/GSPrefs && cd GSPrefs
+  git clone https://github.com/ginsudev/Comet && cd Comet
 ```
-3. Copy / Move the `gsprefs-swiftui` folder into `$THEOS/vendor/templates/ios/` with Finder or by command:
+3. Copy / Move the `comet-prefs` folder into `$THEOS/vendor/templates/ios/` with Finder or by command:
 
 ```bash
-  cp -r gsprefs-swiftui/ $THEOS/vendor/templates/ios/
+  cp -r comet-prefs/ $THEOS/vendor/templates/ios/
 ```
 4. Run the `build.sh` script in `$THEOS/vendor/templates/`
 
@@ -41,14 +41,14 @@ https://orion.theos.dev/getting-started.html
   [iphone/tweak_swift] MobileSubstrate Bundle filter [com.apple.springboard]: [Press Enter]
 ```
 
-6. Create `gsprefs-swiftui` as a subproject inside your tweak:
+6. Create `comet-prefs` as a subproject inside your tweak:
 
 ```bash
 cd ~/sometweakname/
 
 $THEOS/bin/nic.pl
 
-Choose a Template (required): 9 (Or whatever number `gsprefs-swiftui` comes in at)
+Choose a Template (required): 9 (Or whatever number `comet-prefs` comes in at)
 Project Name (required): Some prefs name
 Package Name [com.yourcompany.sometweakname]: com.somecompany.someprefsname
 Author/Maintainer Name [Ginsu]: Ginsu
@@ -60,11 +60,11 @@ Author/Maintainer Name [Ginsu]: Ginsu
   make spm
 ```
 
-8. Add `com.ginsu.gsprefs` as a dependency to your tweak.
+8. Add `com.ginsu.comet` as a dependency to your tweak.
 ```bash
-Depends: com.ginsu.gsprefs
+Depends: com.ginsu.comet
 ```
-Additionally, you can edit your Makefiles and changes settings like TARGET and specify different sdk versions. Note: GSPrefs only supports iOS 14+.
+Additionally, you can edit your Makefiles and changes settings like TARGET and specify different sdk versions. Note: Comet only supports iOS 14+.
 ## How to use it?
 
 That's the simplest part, once you've got everything setup, you can start creating your SwiftUI views and modifying `RootView.swift` to your liking.
