@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		4F1DD2EA29BD574300ADD96C /* Published+Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DD2E929BD574300ADD96C /* Published+Preferences.swift */; };
 		4F9D072629BC3C480037A73A /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D072529BC3C480037A73A /* Preferences.swift */; };
+		4FB059F229C1C63E00E4AEB2 /* CMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB059F129C1C63E00E4AEB2 /* CMViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F1DD2E929BD574300ADD96C /* Published+Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Preferences.swift"; sourceTree = "<group>"; };
 		4F9D071B29BC3C270037A73A /* Comet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D072529BC3C480037A73A /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		4FB059F129C1C63E00E4AEB2 /* CMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,18 @@
 		4F9D071D29BC3C270037A73A /* Comet */ = {
 			isa = PBXGroup;
 			children = (
+				4FB059F029C1C62600E4AEB2 /* UI */,
 				4F1DD2E829BD572E00ADD96C /* Preferences */,
 			);
 			path = Comet;
+			sourceTree = "<group>";
+		};
+		4FB059F029C1C62600E4AEB2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4FB059F129C1C63E00E4AEB2 /* CMViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1DD2EA29BD574300ADD96C /* Published+Preferences.swift in Sources */,
+				4FB059F229C1C63E00E4AEB2 /* CMViewController.swift in Sources */,
 				4F9D072629BC3C480037A73A /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

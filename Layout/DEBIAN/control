@@ -1,5 +1,5 @@
-Package: com.ginsu.gsprefs
-Name: GSPrefs
+Package: com.ginsu.comet
+Name: Comet
 Version: 1.0.0
 Architecture: iphoneos-arm
 Description: A SwiftUI Prefs Framework
