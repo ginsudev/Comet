@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4F1DD2EA29BD574300ADD96C /* Published+Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DD2E929BD574300ADD96C /* Published+Preferences.swift */; };
+		4F64C0D829D0540F00DB4B54 /* RespringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64C0D729D0540F00DB4B54 /* RespringButton.swift */; };
+		4F64C0DD29D0566E00DB4B54 /* Respring.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F64C0DC29D0566E00DB4B54 /* Respring.m */; };
 		4F9D072629BC3C480037A73A /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D072529BC3C480037A73A /* Preferences.swift */; };
 		4FB059F229C1C63E00E4AEB2 /* CMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB059F129C1C63E00E4AEB2 /* CMViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F1DD2E929BD574300ADD96C /* Published+Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Preferences.swift"; sourceTree = "<group>"; };
+		4F64C0D729D0540F00DB4B54 /* RespringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespringButton.swift; sourceTree = "<group>"; };
+		4F64C0D929D0550300DB4B54 /* Respring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Respring.h; sourceTree = "<group>"; };
+		4F64C0DC29D0566E00DB4B54 /* Respring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Respring.m; path = Comet/Helpers/Respring.m; sourceTree = SOURCE_ROOT; };
+		4F64C0DE29D1661800DB4B54 /* Comet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Comet-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F9D071B29BC3C270037A73A /* Comet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D072529BC3C480037A73A /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		4FB059F129C1C63E00E4AEB2 /* CMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +45,15 @@
 			path = Preferences;
 			sourceTree = "<group>";
 		};
+		4F64C0DF29D1667200DB4B54 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4F64C0D929D0550300DB4B54 /* Respring.h */,
+				4F64C0DC29D0566E00DB4B54 /* Respring.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4F9D071129BC3C270037A73A = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +73,8 @@
 		4F9D071D29BC3C270037A73A /* Comet */ = {
 			isa = PBXGroup;
 			children = (
+				4F64C0DE29D1661800DB4B54 /* Comet-Bridging-Header.h */,
+				4F64C0DF29D1667200DB4B54 /* Helpers */,
 				4FB059F029C1C62600E4AEB2 /* UI */,
 				4F1DD2E829BD572E00ADD96C /* Preferences */,
 			);
@@ -68,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				4FB059F129C1C63E00E4AEB2 /* CMViewController.swift */,
+				4F64C0D729D0540F00DB4B54 /* RespringButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -152,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1DD2EA29BD574300ADD96C /* Published+Preferences.swift in Sources */,
+				4F64C0D829D0540F00DB4B54 /* RespringButton.swift in Sources */,
+				4F64C0DD29D0566E00DB4B54 /* Respring.m in Sources */,
 				4FB059F229C1C63E00E4AEB2 /* CMViewController.swift in Sources */,
 				4F9D072629BC3C480037A73A /* Preferences.swift in Sources */,
 			);
@@ -223,6 +243,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Comet/Comet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -285,6 +306,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Comet/Comet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -326,7 +348,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Comet/Comet-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -368,7 +391,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Comet/Comet-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
