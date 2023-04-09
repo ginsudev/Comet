@@ -7,7 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-#include "Respring.h"
+#import "Respring.h"
+#import "Respring-Private.h"
 
 @implementation Respring
 

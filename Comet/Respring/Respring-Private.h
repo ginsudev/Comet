@@ -1,14 +1,12 @@
 //
-//  Respring.h
+//  Respring-Private.h
 //  Comet
 //
-//  Created by Noah Little on 26/3/2023.
+//  Created by Noah Little on 9/4/2023.
 //
 
-#ifndef Respring_h
-#define Respring_h
-
-#import <Foundation/Foundation.h>
+#ifndef Respring_Private_h
+#define Respring_Private_h
 
 typedef NS_OPTIONS(NSUInteger, SBSRelaunchActionOptions) {
     SBSRelaunchActionOptionsNone,
@@ -16,8 +14,6 @@ typedef NS_OPTIONS(NSUInteger, SBSRelaunchActionOptions) {
     SBSRelaunchActionOptionsSnapshotTransition = 1 << 1,
     SBSRelaunchActionOptionsFadeToBlackTransition = 1 << 2
 };
-
-#endif /* Respring_h */
 
 @interface SBSRelaunchAction : NSObject
 + (instancetype)actionWithReason:(id)arg1 options:(SBSRelaunchActionOptions)arg2 targetURL:(id)arg3;
@@ -28,6 +24,4 @@ typedef NS_OPTIONS(NSUInteger, SBSRelaunchActionOptions) {
 - (void)sendActions:(id)arg1 withResult:(/*^block*/id)arg2;
 @end
 
-@interface Respring : NSObject
-+ (void)execute;
-@end
+#endif /* Respring_Private_h */

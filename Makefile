@@ -1,40 +1,48 @@
 ROOTLESS ?= 0
+
+# Build config
 ARCHS = arm64 arm64e
-TARGET = iphone:15.2:14.5
 THEOS_DEVICE_IP = localhost -p 2222
 INSTALL_TARGET_PROCESSES = Preferences
-PACKAGE_VERSION = 1.0.1
+PACKAGE_VERSION = 1.0.2
 
+# Rootless / Rootful settings
 ifeq ($(ROOTLESS),1)
-		THEOS_LAYOUT_DIR_NAME = layout-rootless
-		THEOS_PACKAGE_SCHEME = rootless
-		COMET_INSTALL_PATH = /var/jb/Library/Frameworks
+	THEOS_PACKAGE_SCHEME = rootless
+	COMET_INSTALL_PATH = /var/jb/Library/Frameworks
+	# Control
+	PKG_ARCHITECTURE = iphoneos-arm64
 else
-		THEOS_LAYOUT_DIR_NAME = layout
-		COMET_INSTALL_PATH = /Library/Frameworks
+	COMET_INSTALL_PATH = /Library/Frameworks
+	# Control
+	PKG_ARCHITECTURE = iphoneos-arm
+	PKG_NAME_PREFIX = (Rootless)
 endif
 
 include $(THEOS)/makefiles/common.mk
+
+XCODEPROJ_NAME = Comet
+Comet_XCODEFLAGS = LD_DYLIB_INSTALL_NAME=$(COMET_INSTALL_PATH)/Comet.framework/Comet
+Comet_XCODEFLAGS += DYLIB_INSTALL_NAME_BASE=$(COMET_INSTALL_PATH)/Comet.framework/Comet
+Comet_XCODEFLAGS += DWARF_DSYM_FOLDER_PATH=$(THEOS_OBJ_DIR)/dSYMs
+Comet_XCODEFLAGS += CONFIGURATION_BUILD_DIR=$(THEOS_OBJ_DIR)/
+
 include $(THEOS)/makefiles/xcodeproj.mk
 
-setup: stage
-		@$(PRINT_FORMAT_MAKING) "Setting up build dir"
-		mkdir -p $(THEOS_STAGING_DIR)/DEBIAN/
+override THEOS_PACKAGE_NAME := com.ginsu.comet-$(PKG_ARCHITECTURE)
 
-framework: stage
-		@$(PRINT_FORMAT_MAKING) "Building Comet v$(PACKAGE_VERSION)"
-		xcodebuild clean build -project Comet.xcodeproj \
-				-scheme Comet \
-				-configuration Release \
-				-sdk iphoneos \
-				CONFIGURATION_BUILD_DIR=$(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/ \
-				ARCHS="$(ARCHS)" \
-				CODE_SIGN_IDENTITY="" \
-				CODE_SIGNING_REQUIRED=NO
-				DYLIB_INSTALL_NAME_BASE=$(COMET_INSTALL_PATH)
-				
-sign: stage
-		@$(PRINT_FORMAT_MAKING) "Signing"
-		ldid -Sentitlements.xml $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework/Comet
-
-before-package:: setup framework sign
+before-package::
+	# Append values to control file
+	$(ECHO_NOTHING)sed -i '' \
+		-e 's/\$${PKG_ARCHITECTURE}/$(PKG_ARCHITECTURE)/g' \
+		-e 's/\$${VERSION}/$(PACKAGE_VERSION)/g' \
+		$(THEOS_STAGING_DIR)/DEBIAN/control$(ECHO_END)
+	
+	# Move to staging dir
+	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
+	$(ECHO_NOTHING)mv $(THEOS_OBJ_DIR)/Comet.framework/ $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
+	
+	# Sign
+	$(ECHO_NOTHING)ldid -Sentitlements.xml $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework/Comet$(ECHO_END)
+internal-stage::
+	$(ECHO_NOTHING)rm -rf $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
