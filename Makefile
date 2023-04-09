@@ -12,11 +12,11 @@ ifeq ($(ROOTLESS),1)
 	COMET_INSTALL_PATH = /var/jb/Library/Frameworks
 	# Control
 	PKG_ARCHITECTURE = iphoneos-arm64
+	PKG_NAME_SUFFIX = (Rootless)
 else
 	COMET_INSTALL_PATH = /Library/Frameworks
 	# Control
 	PKG_ARCHITECTURE = iphoneos-arm
-	PKG_NAME_PREFIX = (Rootless)
 endif
 
 include $(THEOS)/makefiles/common.mk
@@ -36,6 +36,7 @@ before-package::
 	$(ECHO_NOTHING)sed -i '' \
 		-e 's/\$${PKG_ARCHITECTURE}/$(PKG_ARCHITECTURE)/g' \
 		-e 's/\$${VERSION}/$(PACKAGE_VERSION)/g' \
+		-e 's/\$${PKG_NAME_SUFFIX}/$(PKG_NAME_SUFFIX)/g' \
 		$(THEOS_STAGING_DIR)/DEBIAN/control$(ECHO_END)
 	
 	# Move to staging dir

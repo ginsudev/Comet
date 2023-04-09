@@ -1,5 +1,5 @@
 Package: com.ginsu.comet
-Name: Comet
+Name: Comet ${PKG_NAME_SUFFIX}
 Architecture: ${PKG_ARCHITECTURE}
 Description: A SwiftUI Prefs Framework
 Maintainer: Ginsu
