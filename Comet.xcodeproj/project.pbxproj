@@ -15,6 +15,11 @@
 		4F34436029E6D42E00FD0B7F /* Bundle+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34435F29E6D42E00FD0B7F /* Bundle+Comet.swift */; };
 		4F34436229E6E41500FD0B7F /* String+CometLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34436129E6E41500FD0B7F /* String+CometLocalized.swift */; };
 		4F34436529E6E4E500FD0B7F /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34436429E6E4E500FD0B7F /* Copy.swift */; };
+		4F34436929E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34436829E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift */; };
+		4F34437129E813CB00FD0B7F /* AppPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34437029E813CB00FD0B7F /* AppPickerViewModelTests.swift */; };
+		4F34437229E813CB00FD0B7F /* Comet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9D071B29BC3C270037A73A /* Comet.framework */; platformFilter = ios; };
+		4F34437929E81AE700FD0B7F /* Storage+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34437829E81AE700FD0B7F /* Storage+Keys.swift */; };
+		4F34437B29E81D2E00FD0B7F /* Test+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34437A29E81D2E00FD0B7F /* Test+Extensions.swift */; };
 		4F64C0D829D0540F00DB4B54 /* RespringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64C0D729D0540F00DB4B54 /* RespringButton.swift */; };
 		4F80F0EE29DF9E1B00F3A6F6 /* HexColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0ED29DF9E1B00F3A6F6 /* HexColorPicker.swift */; };
 		4F80F0F129DFB95800F3A6F6 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0F029DFB95800F3A6F6 /* Color+Hex.swift */; };
@@ -34,6 +39,16 @@
 		4FC6933729E560CA0001D965 /* AppModelArray+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6933629E560CA0001D965 /* AppModelArray+Extensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4F34437329E813CB00FD0B7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F9D071229BC3C270037A73A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F9D071A29BC3C270037A73A;
+			remoteInfo = Comet;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4F0379DE29E2462A00EF331A /* Comet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comet.h; sourceTree = "<group>"; };
 		4F1DD2E929BD574300ADD96C /* Published+Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Preferences.swift"; sourceTree = "<group>"; };
@@ -45,6 +60,12 @@
 		4F34435F29E6D42E00FD0B7F /* Bundle+Comet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Comet.swift"; sourceTree = "<group>"; };
 		4F34436129E6E41500FD0B7F /* String+CometLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CometLocalized.swift"; sourceTree = "<group>"; };
 		4F34436429E6E4E500FD0B7F /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
+		4F34436629E80DD400FD0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "../zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4F34436829E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMApplicationWorkspaceMock.swift; sourceTree = "<group>"; };
+		4F34436E29E813CB00FD0B7F /* CometTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CometTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F34437029E813CB00FD0B7F /* AppPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPickerViewModelTests.swift; sourceTree = "<group>"; };
+		4F34437829E81AE700FD0B7F /* Storage+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage+Keys.swift"; sourceTree = "<group>"; };
+		4F34437A29E81D2E00FD0B7F /* Test+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test+Extensions.swift"; sourceTree = "<group>"; };
 		4F64C0D729D0540F00DB4B54 /* RespringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespringButton.swift; sourceTree = "<group>"; };
 		4F80F0ED29DF9E1B00F3A6F6 /* HexColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorPicker.swift; sourceTree = "<group>"; };
 		4F80F0F029DFB95800F3A6F6 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
@@ -66,6 +87,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F34436B29E813CB00FD0B7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F34437229E813CB00FD0B7F /* Comet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F9D071829BC3C270037A73A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,8 +144,26 @@
 			isa = PBXGroup;
 			children = (
 				4F34436429E6E4E500FD0B7F /* Copy.swift */,
+				4F34437829E81AE700FD0B7F /* Storage+Keys.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		4F34436729E810C300FD0B7F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4F34436829E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4F34436F29E813CB00FD0B7F /* CometTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F34437029E813CB00FD0B7F /* AppPickerViewModelTests.swift */,
+				4F34437A29E81D2E00FD0B7F /* Test+Extensions.swift */,
+			);
+			path = CometTests;
 			sourceTree = "<group>";
 		};
 		4F80F0EF29DFB94800F3A6F6 /* Extensions */ = {
@@ -134,6 +181,7 @@
 			children = (
 				4F34435D29E6D38D00FD0B7F /* Resources.bundle */,
 				4F9D071D29BC3C270037A73A /* Comet */,
+				4F34436F29E813CB00FD0B7F /* CometTests */,
 				4F9D071C29BC3C270037A73A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				4F9D071B29BC3C270037A73A /* Comet.framework */,
+				4F34436E29E813CB00FD0B7F /* CometTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +206,7 @@
 				4FB059F029C1C62600E4AEB2 /* UI */,
 				4F1DD2E829BD572E00ADD96C /* Preferences */,
 				4FC6933929E569940001D965 /* Resources.bundle */,
+				4F34436729E810C300FD0B7F /* Mocks */,
 			);
 			path = Comet;
 			sourceTree = "<group>";
@@ -240,6 +290,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4F34436D29E813CB00FD0B7F /* CometTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F34437529E813CB00FD0B7F /* Build configuration list for PBXNativeTarget "CometTests" */;
+			buildPhases = (
+				4F34436A29E813CB00FD0B7F /* Sources */,
+				4F34436B29E813CB00FD0B7F /* Frameworks */,
+				4F34436C29E813CB00FD0B7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F34437429E813CB00FD0B7F /* PBXTargetDependency */,
+			);
+			name = CometTests;
+			productName = CometTests;
+			productReference = 4F34436E29E813CB00FD0B7F /* CometTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4F9D071A29BC3C270037A73A /* Comet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F9D072229BC3C270037A73A /* Build configuration list for PBXNativeTarget "Comet" */;
@@ -265,8 +333,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					4F34436D29E813CB00FD0B7F = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					4F9D071A29BC3C270037A73A = {
 						CreatedOnToolsVersion = 14.2;
 						LastSwiftMigration = 1430;
@@ -282,6 +354,7 @@
 				Base,
 				"zh-Hans",
 				zh_Hans,
+				"zh-Hant",
 			);
 			mainGroup = 4F9D071129BC3C270037A73A;
 			productRefGroup = 4F9D071C29BC3C270037A73A /* Products */;
@@ -289,11 +362,19 @@
 			projectRoot = "";
 			targets = (
 				4F9D071A29BC3C270037A73A /* Comet */,
+				4F34436D29E813CB00FD0B7F /* CometTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F34436C29E813CB00FD0B7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F9D071929BC3C270037A73A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,6 +386,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F34436A29E813CB00FD0B7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F34437129E813CB00FD0B7F /* AppPickerViewModelTests.swift in Sources */,
+				4F34437B29E81D2E00FD0B7F /* Test+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F9D071729BC3C270037A73A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +407,8 @@
 				4F80F0F129DFB95800F3A6F6 /* Color+Hex.swift in Sources */,
 				4F64C0D829D0540F00DB4B54 /* RespringButton.swift in Sources */,
 				4F2DE1B629E247180000CF6E /* Respring.m in Sources */,
+				4F34437929E81AE700FD0B7F /* Storage+Keys.swift in Sources */,
+				4F34436929E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift in Sources */,
 				4FB059F229C1C63E00E4AEB2 /* CMViewController.swift in Sources */,
 				4F80F0EE29DF9E1B00F3A6F6 /* HexColorPicker.swift in Sources */,
 				4FC6933729E560CA0001D965 /* AppModelArray+Extensions.swift in Sources */,
@@ -333,11 +425,21 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4F34437429E813CB00FD0B7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 4F9D071A29BC3C270037A73A /* Comet */;
+			targetProxy = 4F34437329E813CB00FD0B7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4F34435629E6CDF500FD0B7F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4F34435729E6CDF500FD0B7F /* en */,
+				4F34436629E80DD400FD0B7F /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -353,6 +455,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4F34437629E813CB00FD0B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACH_O_TYPE = mh_bundle;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ginsu.CometTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F34437729E813CB00FD0B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACH_O_TYPE = mh_bundle;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ginsu.CometTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4F9D072029BC3C270037A73A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -580,6 +716,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F34437529E813CB00FD0B7F /* Build configuration list for PBXNativeTarget "CometTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F34437629E813CB00FD0B7F /* Debug */,
+				4F34437729E813CB00FD0B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4F9D071529BC3C270037A73A /* Build configuration list for PBXProject "Comet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

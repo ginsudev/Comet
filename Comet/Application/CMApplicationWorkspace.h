@@ -10,7 +10,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMApplicationWorkspace : NSObject
+@protocol CMApplicationWorkspaceInterface
+- (NSArray<NSDictionary *> *)allApplications;
+- (UIImage *)iconForBundleIdentifier:(NSString *)bundleIdentifier;
+@end
+
+@interface CMApplicationWorkspace : NSObject <CMApplicationWorkspaceInterface>
 - (NSArray<NSDictionary *> *)allApplications;
 - (UIImage *)iconForBundleIdentifier:(NSString *)bundleIdentifier;
 @end

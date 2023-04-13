@@ -28,7 +28,7 @@ public extension AppPicker {
 // MARK: - Internal
 
 internal extension AppPicker {
-    struct AppModel: Identifiable {
+    struct AppModel: Identifiable, Equatable {
         let id: String
         let displayName: String
         let isSystem: Bool
@@ -57,18 +57,18 @@ internal extension AppPicker {
     }
     
     final class ViewModel: ObservableObject {
-        private let workspace = CMApplicationWorkspace()
+        private let workspace: CMApplicationWorkspaceInterface
         private(set) var visibleApplicationGroup: VisibleApplicationGroup
         private(set) var title: String
         private(set) var isSinglePicker: Bool
         
         private var cachedApplications: [[AnyHashable: Any]]? {
             get {
-                UserDefaults.standard.value(forKey: "Comet.Cache.Applications") as? [[AnyHashable: Any]]
+                UserDefaults.standard.value(forKey: Keys.appCache) as? [[AnyHashable: Any]]
             }
             
             set {
-                UserDefaults.standard.setValue(newValue, forKey: "Comet.Cache.Applications")
+                UserDefaults.standard.setValue(newValue, forKey: Keys.appCache)
             }
         }
 
@@ -77,11 +77,13 @@ internal extension AppPicker {
         init(
             visibleApplicationGroup: VisibleApplicationGroup,
             title: String,
-            isSinglePicker: Bool
+            isSinglePicker: Bool,
+            workspace: CMApplicationWorkspaceInterface = CMApplicationWorkspace()
         ) {
             self.visibleApplicationGroup = visibleApplicationGroup
             self.title = title
             self.isSinglePicker = isSinglePicker
+            self.workspace = workspace
         }
         
         func loadIfNeeded() {
