@@ -8,12 +8,14 @@ PACKAGE_VERSION = 1.0.2
 
 # Rootless / Rootful settings
 ifeq ($(ROOTLESS),1)
+	Comet_XCODEFLAGS = SWIFT_ACTIVE_COMPILATION_CONDITIONS="ROOTLESS"
 	THEOS_PACKAGE_SCHEME = rootless
 	COMET_INSTALL_PATH = /var/jb/Library/Frameworks
 	# Control
 	PKG_ARCHITECTURE = iphoneos-arm64
 	PKG_NAME_SUFFIX = (Rootless)
 else
+	Comet_XCODEFLAGS = SWIFT_ACTIVE_COMPILATION_CONDITIONS=""
 	COMET_INSTALL_PATH = /Library/Frameworks
 	# Control
 	PKG_ARCHITECTURE = iphoneos-arm
@@ -22,7 +24,7 @@ endif
 include $(THEOS)/makefiles/common.mk
 
 XCODEPROJ_NAME = Comet
-Comet_XCODEFLAGS = LD_DYLIB_INSTALL_NAME=$(COMET_INSTALL_PATH)/Comet.framework/Comet
+Comet_XCODEFLAGS += LD_DYLIB_INSTALL_NAME=$(COMET_INSTALL_PATH)/Comet.framework/Comet
 Comet_XCODEFLAGS += DYLIB_INSTALL_NAME_BASE=$(COMET_INSTALL_PATH)/Comet.framework/Comet
 Comet_XCODEFLAGS += DWARF_DSYM_FOLDER_PATH=$(THEOS_OBJ_DIR)/dSYMs
 Comet_XCODEFLAGS += CONFIGURATION_BUILD_DIR=$(THEOS_OBJ_DIR)/
@@ -45,5 +47,7 @@ before-package::
 	
 	# Sign
 	$(ECHO_NOTHING)ldid -Sentitlements.xml $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework/Comet$(ECHO_END)
-internal-stage::
+	
+before-all::
 	$(ECHO_NOTHING)rm -rf $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
+	$(ECHO_NOTHING)rm -rf $(THEOS_OBJ_DIR)$(ECHO_END)

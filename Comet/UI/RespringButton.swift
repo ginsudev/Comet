@@ -14,7 +14,7 @@ public struct RespringButton: View {
         Button {
             Respring.execute()
         } label: {
-            Label("Respring", systemImage: "arrow.triangle.2.circlepath")
+            Label(Copy.respring, systemImage: "arrow.triangle.2.circlepath")
         }
     }
 }
