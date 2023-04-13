@@ -48,6 +48,12 @@ before-package::
 	# Sign
 	$(ECHO_NOTHING)ldid -Sentitlements.xml $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework/Comet$(ECHO_END)
 	
+	# Copy to theos/lib
+	$(ECHO_NOTHING)rm -rf $(THEOS)/lib/Comet.framework/$(ECHO_END)
+	$(ECHO_NOTHING)cp -r $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework $(THEOS)/lib/$(ECHO_END)
+		
+
+	
 before-all::
 	$(ECHO_NOTHING)rm -rf $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
 	$(ECHO_NOTHING)rm -rf $(THEOS_OBJ_DIR)$(ECHO_END)

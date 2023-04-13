@@ -33,7 +33,13 @@ struct AppPickerListViewRow: View {
     
     @ViewBuilder
     func checkmarkView(isSelected: Bool) -> some View {
-        Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+        if isSelected {
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.accentColor)
+        } else {
+            Image(systemName: "circle")
+                .foregroundColor(.secondary)
+        }
     }
 }
 
