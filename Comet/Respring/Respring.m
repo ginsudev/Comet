@@ -16,7 +16,8 @@
     SBSRelaunchAction *action = [
         objc_getClass("SBSRelaunchAction")
         actionWithReason:@"RestartRenderServer"
-        options:SBSRelaunchActionOptionsFadeToBlackTransition targetURL:nil
+        options:SBSRelaunchActionOptionsFadeToBlackTransition
+        targetURL:nil
     ];
     
     FBSSystemService *service = [objc_getClass("FBSSystemService") sharedService];

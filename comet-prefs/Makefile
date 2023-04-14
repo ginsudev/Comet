@@ -5,7 +5,6 @@ include @@THEOS@@/makefiles/common.mk
 
 BUNDLE_NAME = @@PROJECTNAME@@
 
-@@PROJECTNAME@@_EXTRA_FRAMEWORKS = Comet
 @@PROJECTNAME@@_FRAMEWORKS = SwiftUI
 @@PROJECTNAME@@_FILES = $(shell find Sources/@@PROJECTNAME@@ -name '*.swift') $(shell find Sources/@@PROJECTNAME@@C -name '*.m' -o -name '*.c' -o -name '*.mm' -o -name '*.cpp')
 @@PROJECTNAME@@_SWIFTFLAGS = -ISources/@@PROJECTNAME@@C/include
