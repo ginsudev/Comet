@@ -6,32 +6,30 @@
 //
 
 import XCTest
+import Combine
 @testable import Comet
 
 final class AppPickerViewModelTests: XCTestCase {
-    private let workspaceMock = CMApplicationWorkspaceMock()
+    private var bag = Set<AnyCancellable>()
     
-    private let cachedApps: [[AnyHashable : Any]] = [
-        ["identifier": "mock_id_1",
-         "displayName": "Mock_1",
-         "isSystem": 1
-        ],
-        ["identifier": "mock_id_2",
-         "displayName": "Mock_2",
-         "isSystem": 0
-        ]
+    private let workspaceMock = ApplicationWorkspaceMock()
+    
+    private let cachedApps: [ApplicationWorkspace.ApplicationProxy] = [
+        .init(id: "mock_id_1", displayName: "Mock_1", isSystem: true),
+        .init(id: "mock_id_2", displayName: "Mock_2", isSystem: false)
     ]
     
     override func tearDown() {
-        UserDefaults.standard.set(nil, forKey: Keys.appCache)
+        UserDefaults.standard.setAppProxies(nil, forKey: Keys.appCache)
     }
     
     func storeInDefaults() {
-        UserDefaults.standard.set(cachedApps, forKey: Keys.appCache)
+        UserDefaults.standard.setAppProxies(cachedApps, forKey: Keys.appCache)
     }
     
     func testLoadAppsIfAppsIsEmpty() {
-        let expectation = XCTestExpectation(description: "apps were set")
+        // GIVEN there are cached apps
+        storeInDefaults()
         
         // GIVEN a new sut
         let sut: AppPicker.ViewModel = .init(
@@ -41,18 +39,18 @@ final class AppPickerViewModelTests: XCTestCase {
             workspace: workspaceMock
         )
         
-        subscribeForChanges(sut.$apps, expectation: expectation)
+        // GIVEN there are initially no apps
+        XCTAssertEqual(sut.appModels, [])
         
-        // WHEN the view does appear
+        // WHEN the view loads
         sut.loadIfNeeded()
-        wait(for: [expectation], timeout: 1.0)
         
         // THEN the applications are set
-        XCTAssertNotEqual(sut.apps, [])
+        XCTAssertNotEqual(sut.appModels, [])
     }
     
     func testLoadFromUserDefaultsThenRealApps() {
-        let cachedExpectation = XCTestExpectation(description: "cached apps were set")
+        var realApps: [ApplicationWorkspace.ApplicationProxy] = []
         let realExpectation = XCTestExpectation(description: "real apps were set")
 
         // GIVEN there are cached apps
@@ -66,37 +64,36 @@ final class AppPickerViewModelTests: XCTestCase {
             workspace: workspaceMock
         )
         
-        subscribeForChanges(
-            sut.$apps,
-            expectation: cachedExpectation
-        )
-        
         // WHEN the view did appear
         sut.loadIfNeeded()
-        wait(for: [cachedExpectation], timeout: 1.0)
         
         // THEN the apps were set to the cached apps
         XCTAssertEqual(
-            sut.apps.map(\.id),
-            cachedApps.compactMap { $0["identifier"] as? String }
+            sut.appModels.map(\.id),
+            cachedApps.compactMap { $0.id }
         )
         
-        subscribeForChanges(
-            sut.$apps,
-            expectation: realExpectation
-        )
+        workspaceMock.loadApplicationsPublisher()
+            .receive(on: DispatchQueue.main)
+            .sink { apps in
+                realApps = apps
+                realExpectation.fulfill()
+            }
+            .store(in: &bag)
+        
         wait(for: [realExpectation], timeout: 1.0)
 
         // THEN the apps were set to the real apps
         XCTAssertEqual(
-            sut.apps.map(\.id),
-            workspaceMock.allApplications().compactMap { $0["identifier"] as? String }
+            sut.appModels.map(\.id),
+            realApps.compactMap { $0.id }
         )
     }
     
     func testLoadRealApplicationsIfNoCachedApps() {
-        let expectation = XCTestExpectation(description: "real apps were set")
-        
+        var realApps: [ApplicationWorkspace.ApplicationProxy] = []
+        let realExpectation = XCTestExpectation(description: "real apps were set")
+
         // GIVEN there are no cached apps
         
         // GIVEN a new sut
@@ -107,20 +104,27 @@ final class AppPickerViewModelTests: XCTestCase {
             workspace: workspaceMock
         )
         
-        subscribeForChanges(
-            sut.$apps,
-            expectation: expectation
-        )
-        
         // WHEN the view did appear
         sut.loadIfNeeded()
-        wait(for: [expectation], timeout: 1.0)
+
+        workspaceMock.loadApplicationsPublisher()
+            .receive(on: DispatchQueue.main)
+            .sink { apps in
+                realApps = apps
+                realExpectation.fulfill()
+            }
+            .store(in: &bag)
         
-        // THEN the apps were set to the cached apps
+        wait(for: [realExpectation], timeout: 1.0)
+
+        // THEN the apps were set to the real apps
         XCTAssertEqual(
-            sut.apps.map(\.id),
-            workspaceMock.allApplications().compactMap { $0["identifier"] as? String }
+            sut.appModels.map(\.id),
+            realApps.compactMap { $0.id }
         )
+        
+        // THEN the cached apps were set to the real apps
+        XCTAssertEqual(realApps, UserDefaults.standard.appProxies(forKey: Keys.appCache))
     }
 }
 

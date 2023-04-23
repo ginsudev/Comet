@@ -9,26 +9,26 @@
 /* Begin PBXBuildFile section */
 		4F0379DF29E2462A00EF331A /* Comet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F0379DE29E2462A00EF331A /* Comet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F1DD2EA29BD574300ADD96C /* Published+Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DD2E929BD574300ADD96C /* Published+Preferences.swift */; };
-		4F2DE1B629E247180000CF6E /* Respring.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DE1B529E247180000CF6E /* Respring.m */; };
-		4F2DE1B829E247330000CF6E /* Respring.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F2DE1B729E247330000CF6E /* Respring.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F34435E29E6D38D00FD0B7F /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F34435D29E6D38D00FD0B7F /* Resources.bundle */; };
 		4F34436029E6D42E00FD0B7F /* Bundle+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34435F29E6D42E00FD0B7F /* Bundle+Comet.swift */; };
 		4F34436229E6E41500FD0B7F /* String+CometLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34436129E6E41500FD0B7F /* String+CometLocalized.swift */; };
 		4F34436529E6E4E500FD0B7F /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34436429E6E4E500FD0B7F /* Copy.swift */; };
-		4F34436929E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34436829E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift */; };
+		4F34436929E810DC00FD0B7F /* ApplicationWorkspaceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34436829E810DC00FD0B7F /* ApplicationWorkspaceMock.swift */; };
 		4F34437129E813CB00FD0B7F /* AppPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34437029E813CB00FD0B7F /* AppPickerViewModelTests.swift */; };
 		4F34437229E813CB00FD0B7F /* Comet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9D071B29BC3C270037A73A /* Comet.framework */; platformFilter = ios; };
 		4F34437929E81AE700FD0B7F /* Storage+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34437829E81AE700FD0B7F /* Storage+Keys.swift */; };
-		4F34437B29E81D2E00FD0B7F /* Test+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34437A29E81D2E00FD0B7F /* Test+Extensions.swift */; };
+		4F3AA21029F4BDEF00D511BD /* ApplicationWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AA20F29F4BDEE00D511BD /* ApplicationWorkspace.swift */; };
+		4F3AA21529F5082300D511BD /* UserDefaults+AppPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AA21429F5082300D511BD /* UserDefaults+AppPicker.swift */; };
+		4F3AA21729F514E600D511BD /* UIImage+Icon.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3AA21629F514E400D511BD /* UIImage+Icon.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4F3AA21929F518BC00D511BD /* Respring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AA21829F518BC00D511BD /* Respring.swift */; };
+		4F3AA21B29F5192400D511BD /* _FBSSystemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AA21A29F5192400D511BD /* _FBSSystemService.m */; };
 		4F64C0D829D0540F00DB4B54 /* RespringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64C0D729D0540F00DB4B54 /* RespringButton.swift */; };
 		4F80F0EE29DF9E1B00F3A6F6 /* HexColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0ED29DF9E1B00F3A6F6 /* HexColorPicker.swift */; };
 		4F80F0F129DFB95800F3A6F6 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0F029DFB95800F3A6F6 /* Color+Hex.swift */; };
 		4F9D072629BC3C480037A73A /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D072529BC3C480037A73A /* Preferences.swift */; };
 		4FB059F229C1C63E00E4AEB2 /* CMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB059F129C1C63E00E4AEB2 /* CMViewController.swift */; };
-		4FC6931729E2675E0001D965 /* Respring-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC6931629E2675E0001D965 /* Respring-Private.h */; };
-		4FC6931A29E29FD50001D965 /* LSApplicationWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC6931929E29FD50001D965 /* LSApplicationWorkspace.h */; };
-		4FC6931C29E2A00A0001D965 /* CMApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6931B29E2A00A0001D965 /* CMApplicationWorkspace.m */; };
-		4FC6931E29E2A0200001D965 /* CMApplicationWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC6931D29E2A0200001D965 /* CMApplicationWorkspace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FC6931729E2675E0001D965 /* FBSSystemService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC6931629E2675E0001D965 /* FBSSystemService.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4FC6931A29E29FD50001D965 /* LSApplicationWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC6931929E29FD50001D965 /* LSApplicationWorkspace.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4FC6932029E2AF190001D965 /* AppPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6931F29E2AF190001D965 /* AppPicker.swift */; };
 		4FC6932329E2AFD00001D965 /* AppPicker.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6932229E2AFD00001D965 /* AppPicker.ViewModel.swift */; };
 		4FC6932929E3A0D30001D965 /* AppPickerSingleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6932829E3A0D30001D965 /* AppPickerSingleListView.swift */; };
@@ -52,8 +52,6 @@
 /* Begin PBXFileReference section */
 		4F0379DE29E2462A00EF331A /* Comet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comet.h; sourceTree = "<group>"; };
 		4F1DD2E929BD574300ADD96C /* Published+Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Preferences.swift"; sourceTree = "<group>"; };
-		4F2DE1B529E247180000CF6E /* Respring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Respring.m; sourceTree = "<group>"; };
-		4F2DE1B729E247330000CF6E /* Respring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Respring.h; sourceTree = "<group>"; };
 		4F34435729E6CDF500FD0B7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		4F34435B29E6CE1F00FD0B7F /* zh_Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hans; path = Localizable.strings; sourceTree = "<group>"; };
 		4F34435D29E6D38D00FD0B7F /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Resources.bundle; path = Comet/Resources.bundle; sourceTree = "<group>"; };
@@ -61,21 +59,24 @@
 		4F34436129E6E41500FD0B7F /* String+CometLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CometLocalized.swift"; sourceTree = "<group>"; };
 		4F34436429E6E4E500FD0B7F /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
 		4F34436629E80DD400FD0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "../zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		4F34436829E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMApplicationWorkspaceMock.swift; sourceTree = "<group>"; };
+		4F34436829E810DC00FD0B7F /* ApplicationWorkspaceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationWorkspaceMock.swift; sourceTree = "<group>"; };
 		4F34436E29E813CB00FD0B7F /* CometTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CometTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F34437029E813CB00FD0B7F /* AppPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPickerViewModelTests.swift; sourceTree = "<group>"; };
 		4F34437829E81AE700FD0B7F /* Storage+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage+Keys.swift"; sourceTree = "<group>"; };
-		4F34437A29E81D2E00FD0B7F /* Test+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test+Extensions.swift"; sourceTree = "<group>"; };
+		4F3AA20F29F4BDEE00D511BD /* ApplicationWorkspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationWorkspace.swift; sourceTree = "<group>"; };
+		4F3AA21329F4BE4A00D511BD /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		4F3AA21429F5082300D511BD /* UserDefaults+AppPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppPicker.swift"; sourceTree = "<group>"; };
+		4F3AA21629F514E400D511BD /* UIImage+Icon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Icon.h"; sourceTree = "<group>"; };
+		4F3AA21829F518BC00D511BD /* Respring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respring.swift; sourceTree = "<group>"; };
+		4F3AA21A29F5192400D511BD /* _FBSSystemService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _FBSSystemService.m; sourceTree = "<group>"; };
 		4F64C0D729D0540F00DB4B54 /* RespringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespringButton.swift; sourceTree = "<group>"; };
 		4F80F0ED29DF9E1B00F3A6F6 /* HexColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorPicker.swift; sourceTree = "<group>"; };
 		4F80F0F029DFB95800F3A6F6 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		4F9D071B29BC3C270037A73A /* Comet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D072529BC3C480037A73A /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		4FB059F129C1C63E00E4AEB2 /* CMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMViewController.swift; sourceTree = "<group>"; };
-		4FC6931629E2675E0001D965 /* Respring-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Respring-Private.h"; sourceTree = "<group>"; };
+		4FC6931629E2675E0001D965 /* FBSSystemService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBSSystemService.h; sourceTree = "<group>"; };
 		4FC6931929E29FD50001D965 /* LSApplicationWorkspace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSApplicationWorkspace.h; sourceTree = "<group>"; };
-		4FC6931B29E2A00A0001D965 /* CMApplicationWorkspace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMApplicationWorkspace.m; sourceTree = "<group>"; };
-		4FC6931D29E2A0200001D965 /* CMApplicationWorkspace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMApplicationWorkspace.h; sourceTree = "<group>"; };
 		4FC6931F29E2AF190001D965 /* AppPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPicker.swift; sourceTree = "<group>"; };
 		4FC6932229E2AFD00001D965 /* AppPicker.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPicker.ViewModel.swift; sourceTree = "<group>"; };
 		4FC6932829E3A0D30001D965 /* AppPickerSingleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPickerSingleListView.swift; sourceTree = "<group>"; };
@@ -117,9 +118,9 @@
 		4F2DE1B429E247090000CF6E /* Respring */ = {
 			isa = PBXGroup;
 			children = (
-				4F2DE1B529E247180000CF6E /* Respring.m */,
-				4F2DE1B729E247330000CF6E /* Respring.h */,
-				4FC6931629E2675E0001D965 /* Respring-Private.h */,
+				4FC6931629E2675E0001D965 /* FBSSystemService.h */,
+				4F3AA21829F518BC00D511BD /* Respring.swift */,
+				4F3AA21A29F5192400D511BD /* _FBSSystemService.m */,
 			);
 			path = Respring;
 			sourceTree = "<group>";
@@ -152,7 +153,7 @@
 		4F34436729E810C300FD0B7F /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				4F34436829E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift */,
+				4F34436829E810DC00FD0B7F /* ApplicationWorkspaceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -161,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				4F34437029E813CB00FD0B7F /* AppPickerViewModelTests.swift */,
-				4F34437A29E81D2E00FD0B7F /* Test+Extensions.swift */,
 			);
 			path = CometTests;
 			sourceTree = "<group>";
@@ -172,6 +172,7 @@
 				4F80F0F029DFB95800F3A6F6 /* Color+Hex.swift */,
 				4F34435F29E6D42E00FD0B7F /* Bundle+Comet.swift */,
 				4F34436129E6E41500FD0B7F /* String+CometLocalized.swift */,
+				4F3AA21429F5082300D511BD /* UserDefaults+AppPicker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,6 +180,7 @@
 		4F9D071129BC3C270037A73A = {
 			isa = PBXGroup;
 			children = (
+				4F3AA21329F4BE4A00D511BD /* module.modulemap */,
 				4F34435D29E6D38D00FD0B7F /* Resources.bundle */,
 				4F9D071D29BC3C270037A73A /* Comet */,
 				4F34436F29E813CB00FD0B7F /* CometTests */,
@@ -227,8 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				4FC6931929E29FD50001D965 /* LSApplicationWorkspace.h */,
-				4FC6931B29E2A00A0001D965 /* CMApplicationWorkspace.m */,
-				4FC6931D29E2A0200001D965 /* CMApplicationWorkspace.h */,
+				4F3AA20F29F4BDEE00D511BD /* ApplicationWorkspace.swift */,
+				4F3AA21629F514E400D511BD /* UIImage+Icon.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -279,11 +281,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FC6931E29E2A0200001D965 /* CMApplicationWorkspace.h in Headers */,
 				4FC6931A29E29FD50001D965 /* LSApplicationWorkspace.h in Headers */,
-				4F2DE1B829E247330000CF6E /* Respring.h in Headers */,
+				4F3AA21729F514E600D511BD /* UIImage+Icon.h in Headers */,
 				4F0379DF29E2462A00EF331A /* Comet.h in Headers */,
-				4FC6931729E2675E0001D965 /* Respring-Private.h in Headers */,
+				4FC6931729E2675E0001D965 /* FBSSystemService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +392,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F34437129E813CB00FD0B7F /* AppPickerViewModelTests.swift in Sources */,
-				4F34437B29E81D2E00FD0B7F /* Test+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,19 +403,21 @@
 				4F34436229E6E41500FD0B7F /* String+CometLocalized.swift in Sources */,
 				4F1DD2EA29BD574300ADD96C /* Published+Preferences.swift in Sources */,
 				4FC6932329E2AFD00001D965 /* AppPicker.ViewModel.swift in Sources */,
+				4F3AA21B29F5192400D511BD /* _FBSSystemService.m in Sources */,
 				4F34436529E6E4E500FD0B7F /* Copy.swift in Sources */,
 				4F80F0F129DFB95800F3A6F6 /* Color+Hex.swift in Sources */,
+				4F3AA21029F4BDEF00D511BD /* ApplicationWorkspace.swift in Sources */,
 				4F64C0D829D0540F00DB4B54 /* RespringButton.swift in Sources */,
-				4F2DE1B629E247180000CF6E /* Respring.m in Sources */,
 				4F34437929E81AE700FD0B7F /* Storage+Keys.swift in Sources */,
-				4F34436929E810DC00FD0B7F /* CMApplicationWorkspaceMock.swift in Sources */,
+				4F3AA21929F518BC00D511BD /* Respring.swift in Sources */,
+				4F34436929E810DC00FD0B7F /* ApplicationWorkspaceMock.swift in Sources */,
 				4FB059F229C1C63E00E4AEB2 /* CMViewController.swift in Sources */,
 				4F80F0EE29DF9E1B00F3A6F6 /* HexColorPicker.swift in Sources */,
 				4FC6933729E560CA0001D965 /* AppModelArray+Extensions.swift in Sources */,
 				4F34436029E6D42E00FD0B7F /* Bundle+Comet.swift in Sources */,
 				4FC6932929E3A0D30001D965 /* AppPickerSingleListView.swift in Sources */,
+				4F3AA21529F5082300D511BD /* UserDefaults+AppPicker.swift in Sources */,
 				4FC6932D29E3AD1A0001D965 /* AppPickerMultiListView.swift in Sources */,
-				4FC6931C29E2A00A0001D965 /* CMApplicationWorkspace.m in Sources */,
 				4F9D072629BC3C480037A73A /* Preferences.swift in Sources */,
 				4FC6933329E421340001D965 /* Searchable+iOS14.swift in Sources */,
 				4FC6933129E41ADE0001D965 /* LoadingViewModifier.swift in Sources */,
@@ -549,7 +551,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MACH_O_TYPE = "";
-				MODULEMAP_FILE = "";
+				MODULEMAP_FILE = module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -617,7 +619,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MACH_O_TYPE = "";
-				MODULEMAP_FILE = "";
+				MODULEMAP_FILE = module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

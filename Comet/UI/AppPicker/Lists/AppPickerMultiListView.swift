@@ -63,7 +63,10 @@ private extension AppPickerMultiListView {
             return apps
         } else {
             return apps
-                .filter {  $0.id.hasPrefix(searchQuery) || $0.displayName.hasPrefix(searchQuery) }
+                .filter {
+                    $0.proxy.id.lowercased().hasPrefix(searchQuery.lowercased())
+                    || $0.proxy.displayName.lowercased().hasPrefix(searchQuery.lowercased())
+                }
         }
     }
     
@@ -82,10 +85,11 @@ struct AppPickerMultiListView_Previews: PreviewProvider {
     static var previews: some View {
         AppPickerMultiListView(
             apps: [
-                .init(id: "abc", displayName: "123", isSystem: true, icon: nil),
-                .init(id: "eefw", displayName: "wfesdfsd", isSystem: true, icon: nil),
-                .init(id: "gefwsd", displayName: "asddsf", isSystem: true, icon: nil),
-                .init(id: "wsvfs", displayName: "adsgs", isSystem: true, icon: nil),
+                .init(proxy: .init(id: "abc", displayName: "132e31", isSystem: false), icon: nil),
+                .init(proxy: .init(id: "eefw", displayName: "asdas", isSystem: true), icon: nil),
+                .init(proxy: .init(id: "sasad", displayName: "qwewqe", isSystem: false), icon: nil),
+                .init(proxy: .init(id: "asdsa", displayName: "awfrf", isSystem: true), icon: nil),
+                .init(proxy: .init(id: "fasdfsa", displayName: "asdsa", isSystem: true), icon: nil)
             ],
             sectionTitle: "System",
             selectedAppIdentifiers: .constant(

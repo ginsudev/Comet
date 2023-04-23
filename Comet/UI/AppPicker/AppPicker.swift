@@ -65,7 +65,7 @@ private extension AppPicker {
         if viewModel.isSinglePicker {
             NavigationLink {
                 AppPickerSingleListView(
-                    apps: viewModel.apps.filtered(visibleGroup: viewModel.visibleApplicationGroup),
+                    apps: viewModel.appModels.filtered(visibleGroup: viewModel.visibleApplicationGroup),
                     sectionTitle: viewModel.visibleApplicationGroup.title,
                     selectedAppIdentifier: $selectedAppIdentifier
                 )
@@ -76,7 +76,7 @@ private extension AppPicker {
         } else {
             NavigationLink {
                 AppPickerMultiListView(
-                    apps: viewModel.apps.filtered(visibleGroup: viewModel.visibleApplicationGroup),
+                    apps: viewModel.appModels.filtered(visibleGroup: viewModel.visibleApplicationGroup),
                     sectionTitle: viewModel.visibleApplicationGroup.title,
                     selectedAppIdentifiers: $selectedAppIdentifiers
                 )
@@ -91,7 +91,7 @@ private extension AppPicker {
         HStack {
             Text(viewModel.title)
             Spacer()
-            if viewModel.apps.isEmpty {
+            if viewModel.appModels.isEmpty {
                 ProgressView()
             } else {
                 selectedAppPreviewView()
@@ -106,6 +106,7 @@ private extension AppPicker {
             if let app = viewModel.app(matchingIdentifier: selectedAppIdentifier) {
                 Image(uiImage: app.icon)
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(
                         width: 25,
                         height: 25

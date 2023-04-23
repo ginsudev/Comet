@@ -8,10 +8,14 @@
 #ifndef LSApplicationWorkspace_h
 #define LSApplicationWorkspace_h
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
+// MARK: - Underlying
+
+NS_ASSUME_NONNULL_BEGIN
 @interface LSApplicationRecord : NSObject
-@property (readonly) NSArray * appTags;
+@property (readonly) NSArray<NSString *> * appTags;
 @property (getter=isLaunchProhibited,readonly) BOOL launchProhibited;
 @end
 
@@ -23,13 +27,12 @@
 @property (nonatomic,readonly) NSString * applicationIdentifier;
 @property (nonatomic,readonly) LSApplicationRecord * correspondingApplicationRecord;
 @property (nonatomic,readonly) NSString * applicationType;
-+ (instancetype)applicationProxyForIdentifier:(NSString *)identifier;
-- (UIImage *)appIconForTableCell;
++ (nullable instancetype)applicationProxyForIdentifier:(NSString *)identifier;
 @end
 
 @interface LSApplicationWorkspace : NSObject
 + (instancetype)defaultWorkspace;
-- (NSArray<LSApplicationProxy *> *)allInstalledApplications;
+- (nullable NSArray<LSApplicationProxy *> *)allApplications;
 @end
-
+NS_ASSUME_NONNULL_END
 #endif /* LSApplicationWorkspace_h */

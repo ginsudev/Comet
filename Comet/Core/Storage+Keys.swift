@@ -8,5 +8,5 @@
 import Foundation
 
 internal enum Keys {
-    static var appCache = "Comet.Cache.Applications"
+    static var appCache = "Comet.Cache.ApplicationProxies"
 }

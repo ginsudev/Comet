@@ -19,7 +19,7 @@ struct AppPickerListViewRow: View {
                 .frame(width: 40, height: 40)
                 .clipShape(RoundedRectangle(cornerRadius: 10.0))
             VStack(alignment: .leading) {
-                Text(app.displayName)
+                Text(app.proxy.displayName)
                     .foregroundColor(.primary)
                     .font(.body)
                 Text(app.id)
@@ -47,9 +47,11 @@ struct AppPickerListViewRow_Previews: PreviewProvider {
     static var previews: some View {
         AppPickerListViewRow(
             app: .init(
-                id: "123",
-                displayName: "abc",
-                isSystem: true,
+                proxy: .init(
+                    id: "123",
+                    displayName: "abc",
+                    isSystem: true
+                ),
                 icon: nil
             ),
             isSelected: true
