@@ -119,8 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				4FC6931629E2675E0001D965 /* FBSSystemService.h */,
-				4F3AA21829F518BC00D511BD /* Respring.swift */,
 				4F3AA21A29F5192400D511BD /* _FBSSystemService.m */,
+				4F3AA21829F518BC00D511BD /* Respring.swift */,
 			);
 			path = Respring;
 			sourceTree = "<group>";
@@ -229,8 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				4FC6931929E29FD50001D965 /* LSApplicationWorkspace.h */,
-				4F3AA20F29F4BDEE00D511BD /* ApplicationWorkspace.swift */,
 				4F3AA21629F514E400D511BD /* UIImage+Icon.h */,
+				4F3AA20F29F4BDEE00D511BD /* ApplicationWorkspace.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";

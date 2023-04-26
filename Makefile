@@ -11,14 +11,13 @@ ifeq ($(ROOTLESS),1)
 	Comet_XCODEFLAGS = SWIFT_ACTIVE_COMPILATION_CONDITIONS="ROOTLESS"
 	THEOS_PACKAGE_SCHEME = rootless
 	COMET_INSTALL_PATH = /var/jb/Library/Frameworks
+	MOVE_TO_THEOS_PATH = $(THEOS)/lib/iphone/rootless/
 	# Control
-	PKG_ARCHITECTURE = iphoneos-arm64
 	PKG_NAME_SUFFIX = (Rootless)
 else
 	Comet_XCODEFLAGS = SWIFT_ACTIVE_COMPILATION_CONDITIONS=""
 	COMET_INSTALL_PATH = /Library/Frameworks
-	# Control
-	PKG_ARCHITECTURE = iphoneos-arm
+	MOVE_TO_THEOS_PATH = $(THEOS)/lib/
 endif
 
 include $(THEOS)/makefiles/common.mk
@@ -36,8 +35,6 @@ override THEOS_PACKAGE_NAME := com.ginsu.comet-$(PKG_ARCHITECTURE)
 before-package::
 	# Append values to control file
 	$(ECHO_NOTHING)sed -i '' \
-		-e 's/\$${PKG_ARCHITECTURE}/$(PKG_ARCHITECTURE)/g' \
-		-e 's/\$${VERSION}/$(PACKAGE_VERSION)/g' \
 		-e 's/\$${PKG_NAME_SUFFIX}/$(PKG_NAME_SUFFIX)/g' \
 		$(THEOS_STAGING_DIR)/DEBIAN/control$(ECHO_END)
 	
@@ -49,8 +46,8 @@ before-package::
 	$(ECHO_NOTHING)ldid -Sentitlements.xml $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework/Comet$(ECHO_END)
 	
 	# Copy to theos/lib
-	$(ECHO_NOTHING)rm -rf $(THEOS)/lib/Comet.framework/$(ECHO_END)
-	$(ECHO_NOTHING)cp -r $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework $(THEOS)/lib/$(ECHO_END)
+	$(ECHO_NOTHING)rm -rf $(MOVE_TO_THEOS_PATH)Comet.framework/$(ECHO_END)
+	$(ECHO_NOTHING)cp -r $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework $(MOVE_TO_THEOS_PATH)$(ECHO_END)
 
 before-all::
 	$(ECHO_NOTHING)rm -rf $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)

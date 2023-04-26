@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Bundle {
+internal extension Bundle {
     static var comet: Bundle {
         #if ROOTLESS
         let path = "/var/jb/Library/Frameworks/Comet.framework/Resources.bundle/"

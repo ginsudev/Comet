@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension UserDefaults {
+internal extension UserDefaults {
     func setAppProxies(_ appProxies: [ApplicationWorkspace.ApplicationProxy]?, forKey key: String) {
         do {
             let data = try JSONEncoder().encode(appProxies)

@@ -1,9 +1,9 @@
 Package: com.ginsu.comet
 Name: Comet ${PKG_NAME_SUFFIX}
-Architecture: ${PKG_ARCHITECTURE}
+Architecture: iphoneos-arm
 Description: A SwiftUI Prefs Framework
 Maintainer: Ginsu
 Author: Ginsu
 Section: Tweaks
 Depends: dev.theos.orion14, firmware (>= 14.0)
-Version: ${VERSION}
+Version: 1.0.0
