@@ -16,7 +16,7 @@ https://orion.theos.dev/getting-started.html
 ```
 
 3. Copy Comet.framework to theos
-- Install Comet from Chariz repo, then copy `/Library/Frameworks/Comet.framework/` on device to your `theos/lib` directory on Mac (`$(THEOS)/lib/`).
+- Install Comet from Chariz repo, then copy `/Library/Frameworks/Comet.framework/` from device to your `theos/lib` directory on Mac (`$(THEOS)/lib/`).
 
 - Or run `make package` to get `Comet.framework` and move it to `theos/lib` folder.
 
