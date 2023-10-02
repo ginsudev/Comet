@@ -38,9 +38,11 @@ before-package::
 		-e 's/\$${PKG_NAME_SUFFIX}/$(PKG_NAME_SUFFIX)/g' \
 		$(THEOS_STAGING_DIR)/DEBIAN/control$(ECHO_END)
 	
+ifeq ($(ROOTLESS),1)
 	# Move to staging dir
 	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
 	$(ECHO_NOTHING)mv $(THEOS_OBJ_DIR)/Comet.framework/ $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
+endif
 
 	# Copy to theos/lib
 	$(ECHO_NOTHING)rm -rf $(MOVE_TO_THEOS_PATH)Comet.framework/$(ECHO_END)
