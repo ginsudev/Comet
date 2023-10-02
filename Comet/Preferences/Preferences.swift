@@ -59,10 +59,10 @@ private extension URL {
                 from: data,
                 options: .mutableContainersAndLeaves,
                 format: &propertyListFormat
-            ) as? [String : Any] else { return [String : Any]() } // Return empty dictionary if plist doesn't exist yet.
+            ) as? [String : Any] else { return [:] } // Return empty dictionary if plist doesn't exist yet.
             return plistDict
         } catch {
-            return [String : Any]()
+            return [:]
         }
     }
 }

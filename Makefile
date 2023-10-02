@@ -4,7 +4,7 @@ ROOTLESS ?= 0
 ARCHS = arm64 arm64e
 THEOS_DEVICE_IP = localhost -p 2222
 INSTALL_TARGET_PROCESSES = Preferences
-PACKAGE_VERSION = 1.0.4
+PACKAGE_VERSION = 1.0.5
 
 # Rootless / Rootful settings
 ifeq ($(ROOTLESS),1)
@@ -41,10 +41,7 @@ before-package::
 	# Move to staging dir
 	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
 	$(ECHO_NOTHING)mv $(THEOS_OBJ_DIR)/Comet.framework/ $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)$(ECHO_END)
-	
-	# Sign
-	$(ECHO_NOTHING)ldid -Sentitlements.xml $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework/Comet$(ECHO_END)
-	
+
 	# Copy to theos/lib
 	$(ECHO_NOTHING)rm -rf $(MOVE_TO_THEOS_PATH)Comet.framework/$(ECHO_END)
 	$(ECHO_NOTHING)cp -r $(THEOS_STAGING_DIR)$(COMET_INSTALL_PATH)/Comet.framework $(MOVE_TO_THEOS_PATH)$(ECHO_END)

@@ -59,7 +59,8 @@ internal extension AppPicker {
         private(set) var title: String
         private(set) var isSinglePicker: Bool
         
-        @Published private var appProxies: [ApplicationWorkspace.ApplicationProxy] = [] {
+        @Published 
+        private var appProxies: [ApplicationWorkspace.ApplicationProxy] = [] {
             didSet {
                 if appProxies != cachedApplications {
                     cachedApplications = appProxies
