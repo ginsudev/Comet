@@ -9,30 +9,23 @@
 #define LSApplicationWorkspace_h
 
 #import <Foundation/Foundation.h>
-#import <MobileCoreServices/MobileCoreServices.h>
-
-// MARK: - Underlying
 
 NS_ASSUME_NONNULL_BEGIN
-@interface LSApplicationRecord : NSObject
+@interface _LSApplicationRecord : NSObject
 @property (readonly) NSArray<NSString *> * appTags;
 @property (getter=isLaunchProhibited,readonly) BOOL launchProhibited;
 @end
 
-@interface LSResourceProxy: NSObject
-@property (setter=_setLocalizedName:,nonatomic,copy) NSString * localizedName;
-@end
-
-@interface LSApplicationProxy : LSResourceProxy
+@interface _LSApplicationProxy : NSObject
 @property (nonatomic,readonly) NSString * applicationIdentifier;
-@property (nonatomic,readonly) LSApplicationRecord * correspondingApplicationRecord;
+@property (nonatomic,readonly) _LSApplicationRecord * correspondingApplicationRecord;
 @property (nonatomic,readonly) NSString * applicationType;
-+ (nullable instancetype)applicationProxyForIdentifier:(NSString *)identifier;
+@property (nonatomic,readonly) NSString * localizedName;
 @end
 
-@interface LSApplicationWorkspace : NSObject
-+ (instancetype)defaultWorkspace;
-- (nullable NSArray<LSApplicationProxy *> *)allApplications;
+@interface _LSApplicationWorkspace : NSObject
++ (nullable NSArray<_LSApplicationProxy *> *)allApplications;
 @end
 NS_ASSUME_NONNULL_END
+
 #endif /* LSApplicationWorkspace_h */

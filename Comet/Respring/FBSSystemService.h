@@ -19,14 +19,6 @@ typedef NS_OPTIONS(NSUInteger, SBSRelaunchActionOptions) {
     SBSRelaunchActionOptionsFadeToBlackTransition = 1 << 2
 };
 
-// MARK: - Underlying
-
-@interface SBSRelaunchAction : NSObject
-@end
-
-@interface FBSSystemService : NSObject
-@end
-
 // MARK: - Facade
 
 @interface _SBSRelaunchAction : NSObject

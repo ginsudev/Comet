@@ -27,10 +27,11 @@ Comet_XCODEFLAGS += LD_DYLIB_INSTALL_NAME=$(COMET_INSTALL_PATH)/Comet.framework/
 Comet_XCODEFLAGS += DYLIB_INSTALL_NAME_BASE=$(COMET_INSTALL_PATH)/Comet.framework/Comet
 Comet_XCODEFLAGS += DWARF_DSYM_FOLDER_PATH=$(THEOS_OBJ_DIR)/dSYMs
 Comet_XCODEFLAGS += CONFIGURATION_BUILD_DIR=$(THEOS_OBJ_DIR)/
+Comet_XCODEFLAGS += BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 
 include $(THEOS)/makefiles/xcodeproj.mk
 
-override THEOS_PACKAGE_NAME := com.ginsu.comet-$(PKG_ARCHITECTURE)
+#override THEOS_PACKAGE_NAME := com.ginsu.comet-$(PKG_ARCHITECTURE)
 
 before-package::
 	# Append values to control file

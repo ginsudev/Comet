@@ -35,7 +35,7 @@ internal final class ApplicationWorkspace: ObservableObject, ApplicationWorkspac
 private extension ApplicationWorkspace {
     func loadApplications(completion: @escaping ([ApplicationProxy]) -> Void) {
         DispatchQueue.global(qos: .background).async {
-            guard let proxies = LSApplicationWorkspace.default().allApplications() else {
+            guard let proxies = _LSApplicationWorkspace.allApplications() else {
                 completion([])
                 return
             }
@@ -54,7 +54,7 @@ private extension ApplicationWorkspace {
     }
 }
 
-private extension Array where Element == LSApplicationProxy {
+private extension Array where Element == _LSApplicationProxy {
     var visibleProxies: Self {
         filter {
             guard !$0.applicationIdentifier.lowercased().contains("com.apple.webapp"),
