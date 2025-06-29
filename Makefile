@@ -4,7 +4,7 @@ ROOTLESS ?= 0
 ARCHS = arm64 arm64e
 THEOS_DEVICE_IP = localhost -p 2222
 INSTALL_TARGET_PROCESSES = Preferences
-PACKAGE_VERSION = 1.0.5
+PACKAGE_VERSION = 1.1.0
 
 # Rootless / Rootful settings
 ifeq ($(ROOTLESS),1)
