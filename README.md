@@ -6,26 +6,23 @@ A Framework for writing SwiftUI preference panes for iOS jailbreak tweaks.
 
 ## Installing the Theos template
 
-1. Install Orion:
-https://orion.theos.dev/getting-started.html
-
-2. Clone this repository
+1. Clone this repository
 
 ```bash
   git clone https://github.com/ginsudev/Comet && cd Comet
 ```
 
-3. Copy Comet.framework to theos
+2. Copy Comet.framework to theos
 - Install Comet from Chariz repo, then copy `/Library/Frameworks/Comet.framework/` on device to your `theos/lib` directory on Mac (`$(THEOS)/lib/`).
 
 - Or run `make package` to get `Comet.framework` and move it to `theos/lib` folder.
 
-4. Copy / Move the `comet-prefs` folder into `$THEOS/vendor/templates/ios/` with Finder or by command:
+3. Copy / Move the `comet-prefs` folder into `$THEOS/vendor/templates/ios/` with Finder or by command:
 
 ```bash
   cp -r comet-prefs/ $THEOS/vendor/templates/ios/
 ```
-5. Run the `build.sh` script in `$THEOS/vendor/templates/`
+4. Run the `build.sh` script in `$THEOS/vendor/templates/`
 
 ```bash
   cd $THEOS/vendor/templates/
@@ -33,7 +30,7 @@ https://orion.theos.dev/getting-started.html
   ./build.sh
 ```
 
-6. Create a new project with NIC and choose `iphone/tweak_swift` (Skip if you already have a tweak):
+5. Create a new project with NIC and choose `iphone/tweak_swift` (Skip if you already have a tweak):
 
 ```bash
   cd ~
@@ -47,7 +44,7 @@ https://orion.theos.dev/getting-started.html
   [iphone/tweak_swift] MobileSubstrate Bundle filter [com.apple.springboard]: [Press Enter]
 ```
 
-7. Create `comet-prefs` as a subproject inside your tweak:
+6. Create `comet-prefs` as a subproject inside your tweak:
 
 ```bash
 cd ~/sometweakname/
@@ -60,13 +57,13 @@ Package Name [com.yourcompany.sometweakname]: com.somecompany.someprefsname
 Author/Maintainer Name [Ginsu]: Ginsu
 ```
 
-8. Run `make spm` in your project:
+7. Run `make spm` in your project:
 
 ```bash
   make spm
 ```
 
-9. Add `com.ginsu.comet` as a dependency to your tweak.
+8. Add `com.ginsu.comet` as a dependency to your tweak.
 ```bash
 Depends: com.ginsu.comet
 ```
