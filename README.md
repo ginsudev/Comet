@@ -17,20 +17,13 @@ A Framework for writing SwiftUI preference panes for iOS jailbreak tweaks.
 
 - Or run `make package` to get `Comet.framework` and move it to `theos/lib` folder.
 
-3. Copy / Move the `comet-prefs` folder into `$THEOS/vendor/templates/ios/` with Finder or by command:
+3. Install the `comet-prefs` NIC template:
 
 ```bash
-  cp -r comet-prefs/ $THEOS/vendor/templates/ios/
-```
-4. Run the `build.sh` script in `$THEOS/vendor/templates/`
-
-```bash
-  cd $THEOS/vendor/templates/
-
-  ./build.sh
+  ./install.sh
 ```
 
-5. Create a new project with NIC and choose `iphone/tweak_swift` (Skip if you already have a tweak):
+4. Create a new project with NIC and choose `iphone/tweak_swift` (Skip if you already have a tweak):
 
 ```bash
   cd ~
@@ -44,7 +37,7 @@ A Framework for writing SwiftUI preference panes for iOS jailbreak tweaks.
   [iphone/tweak_swift] MobileSubstrate Bundle filter [com.apple.springboard]: [Press Enter]
 ```
 
-6. Create `comet-prefs` as a subproject inside your tweak:
+5. Create `comet-prefs` as a subproject inside your tweak:
 
 ```bash
 cd ~/sometweakname/
@@ -57,13 +50,13 @@ Package Name [com.yourcompany.sometweakname]: com.somecompany.someprefsname
 Author/Maintainer Name [Ginsu]: Ginsu
 ```
 
-7. Run `make spm` in your project:
+6. Run `make spm` in your project:
 
 ```bash
   make spm
 ```
 
-8. Add `com.ginsu.comet` as a dependency to your tweak.
+7. Add `com.ginsu.comet` as a dependency to your tweak.
 ```bash
 Depends: com.ginsu.comet
 ```
