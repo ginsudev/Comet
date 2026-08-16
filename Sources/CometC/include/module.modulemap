@@ -1,0 +1,4 @@
+module CometC {
+    umbrella "."
+    export *
+}
